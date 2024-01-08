@@ -1,32 +1,181 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Quiz Website</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
+
+
 <body>
-    <main>
+
+    <main class="maincontainer">
+
+
+
         <header>
+
             <div>
+
                 <h1>Quiz</h1>
+
             </div>
+
             <div>
+
                 <a href="#">Home</a>
+
                 <a href="#">About</a>
+
                 <a href="#">Services</a>
+
                 <a href="#">Contact</a>
+
             </div>
+
         </header>
+
+
+
+        <section>
+
+            <h1>Quiz Website</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molesti</p>
+
+            <button class="start-btn">Start Quiz</button>
+
+        </section>
+
+
+
+        <div id="blackbg"></div>
+
+
+
     </main>
 
 
+
+    <popup class="popup">
+
+        <div>
+
+            <h1>Quiz Quide</h1>
+
+            <p>1. Lorem ipsum dolor sit amet, consectetur</p>
+
+            <p>2. Lorem ipsum dolor sit amet, consectetur</p>
+
+            <p>3. Lorem ipsum dolor sit amet, consectetur</p>
+
+            <p> 4.Lorem ipsum dolor sit amet, consectetur</p>
+
+        </div>
+
+
+
+        <div>
+
+            <button class="exit-btn">Exit quiz</button>
+
+            <button class="continue-btn">Continue</button>
+
+        </div>
+
+
+
+    </popup>
+
+
+
+    <div class="test">
+
+        <div class="quizname">
+
+            <h2>Baller Quiz</h2>
+
+            <div>
+
+                <p>Baller Quiz App</p>
+
+                <p id="score">Score: 0 / 5</p>
+
+            </div>
+
+        </div>
+
+        <div class="questionsdiv">
+
+            <p id="question">this is a question</p>
+
+            <p id="option1">this is a option</p>
+
+            <p id="option2">this is a option</p>
+
+            <p id="option3">this is a option</p>
+
+            <p id="option4">this is a option</p>
+
+        </div>
+
+        <div id="bottom">
+
+            <p id="questiontracker">1 of 5 questions</p>
+
+            <button id="next">Next</button>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="resultpopup">
+
+        <h2>Quiz Result</h2>
+
+        <div id="progressdiv">
+
+            <div id="progress">100%</div>
+
+        </div>
+
+        <p id="yourresult">You scored 0 out of 5</p>
+
+        <div>
+
+            <button id="tryagainbtn">Try Again</button>
+
+            <button id="gotohomebtn">Go to home</button>
+
+        </div>
+
+    </div>
+
+
+
+
+
 </body>
+
 <script src="questions.js"></script>
+
 <script src="script.js"></script>
 
-</html>
+
+
+    </html>
