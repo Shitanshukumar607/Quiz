@@ -1,36 +1,330 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-
-html {
-    overflow: hidden;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
 }
+
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+
 }
 
 main {
-    background-image: url(background.jpg);
+    background-image: url(https://i.ibb.co/Qjc0R7n/background.jpg);
     background-size: cover;
     aspect-ratio: 16/9;
-    width: 100vh;
-    height: 640px;
-    margin: 800px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+
 }
 
 header {
+    color: white;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color:black;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+
+header a:hover {
+    color: rgba(255, 0, 247, 1);
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px;
+    width: 500px;
+}
+
+section h1 {
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+section button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgba(255, 0, 247, 1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+section button:hover {
+    background-color: transparent;
+}
+
+popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    transform: scale(0.1);
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+}
+
+popup h1 {
+    color: rgba(255, 0, 247, 1);
+}
+
+popup div:nth-child(1) {
+    border-bottom: 1px solid grey;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+popup div:nth-child(2) {
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+popup button {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid rgba(255, 0, 247, 1);
+}
+
+popup div:nth-child(2) button:first-child {
+    background-color: rgba(255, 0, 247, 1);
+    color: white;
+}
+
+popup div:nth-child(2) button:last-child {
+    background-color: white;
+    color: rgba(255, 0, 247, 1);
+}
+
+#blackbg {
+    background-color: rgba(16, 0, 58, 1);
+    aspect-ratio: 16/9;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    bottom: 50%;
+    left: -100%;
+    right: -100%;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+
+.test {
+    border: 2px solid #00ffea;
+    padding: 20px;
+    width: 350px;
+    margin: 20px auto;
+    border-radius: 8px;
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    transition: all 0.6s ease;
+    transform: scale(0.0000000001);
+    opacity: 0;
+}
+
+.quizname {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quizname h2 {
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.quizname div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quizname p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.questionsdiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding-bottom: 20px;
+}
+
+.questionsdiv p {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px;
+}
+
+#question {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#bottom {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bottom button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #00ffea;
+    color: #151515;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#bottom button:hover {
+    background-color: #00ccaa;
+}
+
+.questionsdiv p:not(:first-of-type) {
+    border: 1px solid #333;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.questionsdiv p[id^="option"]:hover {
+    background-color: #333;
+}
+
+
+
+
+
+.resultpopup {
+    position: absolute;
+    border: 2px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    opacity: 0;
+    transform: scale(0.001);
+    transition: transform 0.6s ease, opacity 0.3s ease;
+    z-index: 10000;
+}
+
+#progressdiv {
+    margin: 15px;
+    background: conic-gradient(#7d2ae8 3.6deg, white 0deg);
+    aspect-ratio: 1;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress {
+    background-color: white;
+    aspect-ratio: 1;
+    height: 125px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.resultpopup h2 {
+    color: #333;
+}
+
+#yourresult {
+    font-weight: bold;
+    color: #ff5733;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+#tryagainbtn {
+    background-color: #3498db;
+    color: white;
+}
+
+#gotohomebtn {
+    background-color: #2ecc71;
+    color: white;
 }
